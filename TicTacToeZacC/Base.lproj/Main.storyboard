@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +14,195 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TicTacToeZacC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="z8S-Rh-Zo5">
+                                <rect key="frame" x="0.0" y="86" width="375" height="375"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="j6M-CH-qI2">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="125"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zpo-In-ukT" customClass="TicTacToeButton" customModule="TicTacToeZacC" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="125" height="125"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                <connections>
+                                                    <action selector="placeMarker:" destination="BYZ-38-t0r" eventType="touchUpInside" id="J9k-VY-s1R"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gzo-Vl-9FB" customClass="TicTacToeButton" customModule="TicTacToeZacC" customModuleProvider="target">
+                                                <rect key="frame" x="125" y="0.0" width="125" height="125"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                <connections>
+                                                    <action selector="placeMarker:" destination="BYZ-38-t0r" eventType="touchUpInside" id="35n-ak-aJM"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mw5-93-D1q" customClass="TicTacToeButton" customModule="TicTacToeZacC" customModuleProvider="target">
+                                                <rect key="frame" x="250" y="0.0" width="125" height="125"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                <connections>
+                                                    <action selector="placeMarker:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VxF-eZ-HH6"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="mw5-93-D1q" firstAttribute="firstBaseline" secondItem="Gzo-Vl-9FB" secondAttribute="firstBaseline" id="3xL-Y3-cGO"/>
+                                            <constraint firstItem="zpo-In-ukT" firstAttribute="firstBaseline" secondItem="mw5-93-D1q" secondAttribute="firstBaseline" id="9VB-zV-tVf"/>
+                                            <constraint firstItem="zpo-In-ukT" firstAttribute="firstBaseline" secondItem="Gzo-Vl-9FB" secondAttribute="firstBaseline" id="JhU-H5-w1T"/>
+                                            <constraint firstItem="zpo-In-ukT" firstAttribute="top" secondItem="j6M-CH-qI2" secondAttribute="top" id="Nhd-YM-ojw"/>
+                                            <constraint firstItem="zpo-In-ukT" firstAttribute="baseline" secondItem="mw5-93-D1q" secondAttribute="baseline" id="j3r-1E-ISe"/>
+                                            <constraint firstItem="Gzo-Vl-9FB" firstAttribute="baseline" secondItem="zpo-In-ukT" secondAttribute="baseline" id="xTI-YQ-AUd"/>
+                                            <constraint firstItem="mw5-93-D1q" firstAttribute="baseline" secondItem="Gzo-Vl-9FB" secondAttribute="baseline" id="z3h-OX-zUv"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="sPC-IN-bRm">
+                                        <rect key="frame" x="0.0" y="125" width="375" height="125"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EXh-0Q-Nkx" customClass="TicTacToeButton" customModule="TicTacToeZacC" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="125" height="125"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                <connections>
+                                                    <action selector="placeMarker:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vV2-C4-d6k"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0vC-qV-sXj" customClass="TicTacToeButton" customModule="TicTacToeZacC" customModuleProvider="target">
+                                                <rect key="frame" x="125" y="0.0" width="125" height="125"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                <connections>
+                                                    <action selector="placeMarker:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uuM-6I-2Jh"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FPl-kS-q8G" customClass="TicTacToeButton" customModule="TicTacToeZacC" customModuleProvider="target">
+                                                <rect key="frame" x="250" y="0.0" width="125" height="125"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                <connections>
+                                                    <action selector="placeMarker:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f6R-0F-ecR"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="FPl-kS-q8G" firstAttribute="baseline" secondItem="EXh-0Q-Nkx" secondAttribute="baseline" id="EPD-D6-sAq"/>
+                                            <constraint firstItem="EXh-0Q-Nkx" firstAttribute="firstBaseline" secondItem="0vC-qV-sXj" secondAttribute="firstBaseline" id="H83-ji-glp"/>
+                                            <constraint firstAttribute="height" constant="125" id="JEA-KD-Ie9"/>
+                                            <constraint firstItem="0vC-qV-sXj" firstAttribute="baseline" secondItem="FPl-kS-q8G" secondAttribute="baseline" id="U6n-6g-NIC"/>
+                                            <constraint firstItem="EXh-0Q-Nkx" firstAttribute="firstBaseline" secondItem="FPl-kS-q8G" secondAttribute="firstBaseline" id="mRg-gt-6Pu"/>
+                                            <constraint firstItem="0vC-qV-sXj" firstAttribute="baseline" secondItem="EXh-0Q-Nkx" secondAttribute="baseline" id="s2y-vn-cg2"/>
+                                            <constraint firstItem="0vC-qV-sXj" firstAttribute="firstBaseline" secondItem="FPl-kS-q8G" secondAttribute="firstBaseline" id="xYd-Bq-iKv"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="wEs-Fo-HuM">
+                                        <rect key="frame" x="0.0" y="250" width="375" height="125"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YRf-9t-lZx" customClass="TicTacToeButton" customModule="TicTacToeZacC" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="125" height="125"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                <connections>
+                                                    <action selector="placeMarker:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aA0-SM-LYG"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CB0-cH-N6f" customClass="TicTacToeButton" customModule="TicTacToeZacC" customModuleProvider="target">
+                                                <rect key="frame" x="125" y="0.0" width="125" height="125"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                <connections>
+                                                    <action selector="placeMarker:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zod-bA-ZvN"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dqk-1C-Lzg" customClass="TicTacToeButton" customModule="TicTacToeZacC" customModuleProvider="target">
+                                                <rect key="frame" x="250" y="0.0" width="125" height="125"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                <connections>
+                                                    <action selector="placeMarker:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hct-Sy-JSJ"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="Dqk-1C-Lzg" firstAttribute="firstBaseline" secondItem="YRf-9t-lZx" secondAttribute="firstBaseline" id="7Cu-yX-88z"/>
+                                            <constraint firstItem="Dqk-1C-Lzg" firstAttribute="baseline" secondItem="YRf-9t-lZx" secondAttribute="baseline" id="87K-GR-pKl"/>
+                                            <constraint firstItem="CB0-cH-N6f" firstAttribute="firstBaseline" secondItem="Dqk-1C-Lzg" secondAttribute="firstBaseline" id="8pu-i3-oRx"/>
+                                            <constraint firstItem="CB0-cH-N6f" firstAttribute="baseline" secondItem="Dqk-1C-Lzg" secondAttribute="baseline" id="HWg-km-Or7"/>
+                                            <constraint firstItem="YRf-9t-lZx" firstAttribute="firstBaseline" secondItem="CB0-cH-N6f" secondAttribute="firstBaseline" id="OOo-4t-u5G"/>
+                                            <constraint firstItem="CB0-cH-N6f" firstAttribute="baseline" secondItem="YRf-9t-lZx" secondAttribute="baseline" id="yvE-fL-dMh"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="sPC-IN-bRm" firstAttribute="top" secondItem="z8S-Rh-Zo5" secondAttribute="top" constant="125" id="dlH-Bj-UOu"/>
+                                    <constraint firstItem="sPC-IN-bRm" firstAttribute="centerY" secondItem="z8S-Rh-Zo5" secondAttribute="centerY" id="ozB-wa-Gav"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player 1: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5HE-Si-5fV">
+                                <rect key="frame" x="16" y="517" width="96" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nuI-O8-qiA">
+                                <rect key="frame" x="120" y="506" width="16.5" height="53"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player 2: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3cJ-GW-BcE">
+                                <rect key="frame" x="213" y="517" width="99" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0S3-m5-pYV">
+                                <rect key="frame" x="320" y="506" width="16.5" height="53"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tic Tac Toe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gqk-D8-cGo">
+                                <rect key="frame" x="121" y="27" width="132" height="44"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="nuI-O8-qiA" firstAttribute="top" secondItem="z8S-Rh-Zo5" secondAttribute="bottom" constant="45" id="0dU-cB-J4A"/>
+                            <constraint firstAttribute="trailing" secondItem="z8S-Rh-Zo5" secondAttribute="trailing" id="4lG-pO-jaf"/>
+                            <constraint firstItem="z8S-Rh-Zo5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="8v6-ot-yzA"/>
+                            <constraint firstItem="gqk-D8-cGo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="7" id="Atf-Ig-DvH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="nuI-O8-qiA" secondAttribute="bottom" constant="108" id="EyD-k3-YFu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="5HE-Si-5fV" secondAttribute="bottom" constant="120" id="K97-s0-dEp"/>
+                            <constraint firstItem="5HE-Si-5fV" firstAttribute="top" secondItem="z8S-Rh-Zo5" secondAttribute="bottom" constant="56" id="MB4-6h-66H"/>
+                            <constraint firstItem="3cJ-GW-BcE" firstAttribute="top" secondItem="z8S-Rh-Zo5" secondAttribute="bottom" constant="56" id="MJK-Lr-Im8"/>
+                            <constraint firstItem="0S3-m5-pYV" firstAttribute="leading" secondItem="3cJ-GW-BcE" secondAttribute="trailing" constant="8" id="Q9a-Ra-wcS"/>
+                            <constraint firstItem="0S3-m5-pYV" firstAttribute="top" secondItem="z8S-Rh-Zo5" secondAttribute="bottom" constant="45" id="VIi-Bd-oFZ"/>
+                            <constraint firstItem="z8S-Rh-Zo5" firstAttribute="top" secondItem="gqk-D8-cGo" secondAttribute="bottom" constant="14.5" id="aii-cQ-td7"/>
+                            <constraint firstItem="nuI-O8-qiA" firstAttribute="leading" secondItem="5HE-Si-5fV" secondAttribute="trailing" constant="8" id="cGk-na-Krr"/>
+                            <constraint firstItem="5HE-Si-5fV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="ghU-OU-gzY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="0S3-m5-pYV" secondAttribute="bottom" constant="108" id="hcH-Aq-H9f"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="3cJ-GW-BcE" secondAttribute="bottom" constant="120" id="irX-96-NPp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0S3-m5-pYV" secondAttribute="trailing" constant="38.5" id="pTZ-Mo-EZW"/>
+                            <constraint firstItem="gqk-D8-cGo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="121" id="y1T-c1-DS7"/>
+                            <constraint firstItem="gqk-D8-cGo" firstAttribute="centerX" secondItem="z8S-Rh-Zo5" secondAttribute="centerX" id="zhw-gx-z23"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="button1" destination="zpo-In-ukT" id="IvP-bd-tSS"/>
+                        <outlet property="button2" destination="Gzo-Vl-9FB" id="H3T-Ii-fXo"/>
+                        <outlet property="button3" destination="mw5-93-D1q" id="HRI-It-YoL"/>
+                        <outlet property="button4" destination="EXh-0Q-Nkx" id="dBu-62-db1"/>
+                        <outlet property="button5" destination="0vC-qV-sXj" id="RpU-yE-MxP"/>
+                        <outlet property="button6" destination="FPl-kS-q8G" id="fci-g1-zEl"/>
+                        <outlet property="button7" destination="YRf-9t-lZx" id="kWC-qV-oIF"/>
+                        <outlet property="button8" destination="CB0-cH-N6f" id="gZp-xh-GQ0"/>
+                        <outlet property="button9" destination="Dqk-1C-Lzg" id="Vtw-cs-SuL"/>
+                        <outlet property="player1Score" destination="nuI-O8-qiA" id="woK-SJ-kTx"/>
+                        <outlet property="player2Score" destination="0S3-m5-pYV" id="kh2-Xp-gXb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="31.934032983508249"/>
         </scene>
     </scenes>
 </document>

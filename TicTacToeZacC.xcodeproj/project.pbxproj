@@ -15,6 +15,7 @@
 		A772069E201FC35E008BBEDB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A772069C201FC35E008BBEDB /* LaunchScreen.storyboard */; };
 		A77206A9201FC35E008BBEDB /* TicTacToeZacCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77206A8201FC35E008BBEDB /* TicTacToeZacCTests.swift */; };
 		A77206B4201FC35E008BBEDB /* TicTacToeZacCUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77206B3201FC35E008BBEDB /* TicTacToeZacCUITests.swift */; };
+		A77206C2201FC59F008BBEDB /* TicTacToeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77206C1201FC59F008BBEDB /* TicTacToeButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		A77206AF201FC35E008BBEDB /* TicTacToeZacCUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TicTacToeZacCUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A77206B3201FC35E008BBEDB /* TicTacToeZacCUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToeZacCUITests.swift; sourceTree = "<group>"; };
 		A77206B5201FC35E008BBEDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A77206C1201FC59F008BBEDB /* TicTacToeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToeButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				A772069C201FC35E008BBEDB /* LaunchScreen.storyboard */,
 				A772069F201FC35E008BBEDB /* Info.plist */,
 				A7720697201FC35E008BBEDB /* TicTacToeZacC.xcdatamodeld */,
+				A77206C1201FC59F008BBEDB /* TicTacToeButton.swift */,
 			);
 			path = TicTacToeZacC;
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A77206C2201FC59F008BBEDB /* TicTacToeButton.swift in Sources */,
 				A7720699201FC35E008BBEDB /* TicTacToeZacC.xcdatamodeld in Sources */,
 				A7720693201FC35E008BBEDB /* ViewController.swift in Sources */,
 				A7720691201FC35E008BBEDB /* AppDelegate.swift in Sources */,
